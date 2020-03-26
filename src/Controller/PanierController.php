@@ -27,8 +27,15 @@ class PanierController extends AbstractController
           ];
         }
 
+        $total = 0;
+
+        foreach($panierEnrichi as $produit){
+          $totalProduit = $produit['article']->getPrice() * $produit['quantity'];
+          $total += $totalProduit;
+        }
+
         return $this->render('panier/index.html.twig', [
-            'produits' => $panierEnrichi,
+            'produits' => $panierEnrichi, 'total' => $total,
         ]);
     }
 
@@ -51,6 +58,23 @@ class PanierController extends AbstractController
 
       $session->set('panier', $panier);
 
-      dd($session->get('panier'));
+      return $this->redirectToRoute('panier');
+    }
+
+    /**
+      * @Route("/panier/delete/{id}", name="panier_delete")
+      */
+    public function delete($id, SessionInterface $session)
+    {
+      $panier = $session->get('panier', []);
+
+      if(!empty($panier[$id])) {
+        unset($panier[$id]);
+      }
+
+      $session->set('panier', $panier);
+
+      return $this->redirectToRoute('panier');
+
     }
 }

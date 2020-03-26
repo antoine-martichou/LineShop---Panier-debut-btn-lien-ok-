@@ -1,13 +1,21 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello PanierController!{% endblock %}
+{% block title %}Panier{% endblock %}
 
 {% block body %}
+    <div>
+        <div class="bandeauCate">
+            <ul class="categories">
+                <li> <a href="{{ path('article') }}" class="lienCate"> All Categories </a> </li>
+            </ul>
+        </div>
+    </div>
     {% if produits | length > 0 %}
       <table class='table'>
         <thead>
           <tr>
             <td>Produit</td>
+            <td></td>
             <td>Prix</td>
             <td>Quantite</td>
             <td>Total</td>
@@ -18,17 +26,25 @@
           {% for produit in produits %}
             <tr>
               <td> {{ produit.article.namearticle }}</td>
-              <td> {{ produit.article.price }} </td>
+              <td><img src="/img/{{ produit.article.image }}" width="50px"></td>
+              <td> {{ produit.article.price }} €</td>
               <td> {{ produit.quantity }}</td>
-              <td> {{ produit.article.price * produit.quantity }}</td>
-              <td> <a href="#" class="btn btn-danger btn-sm">
+              <td> {{ produit.article.price * produit.quantity }} €</td>
+              <td> <a href="{{ path('panier_delete', {'id' : produit.article.idarticle })}}" class="btn btn-danger btn-sm">
                 <img src="/img/del.png">
               </a></td>
             </tr>
           {% endfor %}
         </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="4" class="text-right">Total :</td>
+            <td>{{ total }} €</td>
+            <td></td>
+          </tr>
+        </tfoot>
       </table>
     {% else %}
-      <p> C VIDE </p>
+      <p>Votre panier est vide!</p>
     {% endif %}
 {% endblock %}

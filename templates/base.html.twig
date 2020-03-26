@@ -23,19 +23,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <div class="ml-auto panier">
                     <div class="cadie">
-                        <img src="/img/caddie.png">
-                    </div>
-                    <div class="sectionPanier">
-                        <h3>items</h3>
-                        <div class="qtePanier">
-                            1
-                        </div>
-                    </div>
-                    <div class="sectionPanier">
-                        <h3>total</h3>
-                        <div class="totalPanier">
-                            1
-                        </div>
+                        <a href="{{ path('panier') }}"><img src="/img/caddie.png"></a>
                     </div>
                 <div>
             </div>
@@ -50,7 +38,7 @@
           <span>Welcome <a href="{{ path('app_login') }}" class="userSession">login</a></span>
       </div>
       {% endif %}
-      
+
         {# <div>
         <p class="text-center"> You are here : Home >> Electonics </p>
         </div> #}
