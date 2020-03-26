@@ -1,0 +1,181 @@
+/** HEADER **/
+nav
+{    
+    color: whitesmoke;
+    
+}
+#titre-phrase
+{
+    display: flex;
+    flex-direction: row;
+}
+.phrase
+{
+    margin-left: 10px;
+    padding-top: 8px;
+}
+
+.panier
+{
+    display: flex;
+    flex-direction: row;
+}
+.sectionPanier
+{
+    margin-right: 10px;
+}
+.cadie
+{
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+.qtePanier, .totalPanier
+{
+    text-align: center;
+}
+h3
+{
+    text-transform: uppercase;
+    font-size: 16px;
+    color: rgb(148,204,85);
+}
+/* Bandeau de session */
+
+.session
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    background-color: rgb(60,68,81);
+    text-align: center;
+    color: white;
+}
+.userSession
+{
+    
+    text-decoration: none;
+    color: rgb(148,204,85);
+}
+.userSession:hover
+{
+    color: black;
+}
+/* Bandeau catégorie */
+.bandeauCate
+{
+    margin-bottom: 40px;
+}
+.categories
+{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+.categories, li 
+{
+    margin-right: 15px; margin-top: 30px;
+}
+.lienCate
+{
+    text-decoration: none;
+    color: rgb(39,44,49);
+}
+.lienCate:hover
+{
+    color: black;
+}
+
+
+/*** BODY PAGE D'ACCUEIL ****/
+
+#imgArticle
+{
+    border-top: 1px solid rgb(138,133,134); 
+    border-left: 1px solid rgb(138,133,134); 
+    border-right: 1px solid rgb(138,133,134);
+    height: 200px;
+    width: 326px;
+}
+#nom
+{
+    border-top: 1px solid rgb(138,133,134);
+    border-left: 1px solid rgb(138,133,134); 
+    border-right: 1px solid rgb(138,133,134);
+    color: rgba(0,0,0,0.7);
+    background-color: rgb(237,237,237);
+    height: 40px;
+    font-style: italic;
+}
+#prixArticle
+{
+    color: rgb(115,183,63);
+}
+#showMore
+{
+    height: 40px;
+    border: 1px solid rgb(138,133,134);
+    background-color: rgb(237,237,237);
+}
+#lienShowMore
+{
+    color: rgba(0,0,0,0.7);
+    text-decoration: none;
+}
+#lienShowMore:hover
+{
+    color: rgb(115,183,63);
+
+}
+#ajoutPanier
+{
+    height: 40px;
+    width: 40px;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(237,237,237);
+    border-top: 1px solid rgb(138,133,134);
+    border-right: 1px solid rgb(138,133,134);
+    border-bottom: 1px solid rgb(138,133,134);
+}
+
+
+/** BODY PAGE SHOW_ARTICLE **/
+
+.titreShowArticle
+{
+    color: rgba(0,0,0,0.7);
+    background-color: rgb(237,237,237);
+    border-top: 1px solid rgb(138,133,134);
+    border-bottom: 1px solid rgb(138,133,134);
+    font-style: italic;
+}
+.prixShowArticle
+{
+    color:rgb(115,183,63);
+}
+.imgShowArticle
+{
+    border-left: 1px solid rgb(138,133,134); 
+    border-right: 1px solid rgb(138,133,134);
+    background-color: rgb(237,237,237);
+    padding-top: 10px;
+}
+.descriptionArticle
+{
+    color: rgba(0,0,0,0.7);
+}
+
+.tamere
+{
+   width: 100px;
+   height: 30px;
+   background-color: black;
+}
+.liens
+{
+    text-decoration: none;
+}
